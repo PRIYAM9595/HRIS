@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HRIS - Training</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="dashboard">
+        <header class="dashboard-header">
+            <div class="header-center">
+                <h1>HUMAN RESOURCE INFORMATION SYSTEM</h1>
+                <p class="current-date" id="currentDate"></p>
+            </div>
+            <div class="user-actions">
+                <div class="user-greeting">
+                    <span id="timeGreeting">Good Morning</span>,
+                    <span id="userName">Admin</span>
+                </div>
+                <button class="logout-btn">Logout</button>
+            </div>
+        </header>
+
+        <nav class="main-nav">
+            <div class="nav-container">
+                <div class="nav-items">
+                    <a href="dashboard.html" class="nav-item" data-section="dashboard">Dashboard</a>
+                    <a href="training.html" class="nav-item active" data-section="training">Training</a>
+                    <a href="hiring.html" class="nav-item" data-section="hiring">Hiring</a>
+                    <a href="assessment.html" class="nav-item" data-section="assessment">Assessment</a>
+                    <a href="correspondence.html" class="nav-item" data-section="correspondence">Correspondence</a>
+                    <a href="events.html" class="nav-item" data-section="events">Events</a>
+                </div>
+                <div class="search-container">
+                    <input type="text" placeholder="Search..." class="search-input">
+                    <button class="search-btn">
+                        <span class="search-icon">🔍</span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+
+        <main class="dashboard-content">
+            <section class="content-section active">
+                <div class="section-header">
+                    <h2><span class="header-icon">🎓</span> Training Programs</h2>
+                </div>
+                
+                <div class="training-tabs">
+                    <button class="tab-btn active" data-tab="student">Student Training</button>
+                    <button class="tab-btn" data-tab="employee">Employee Training</button>
+                </div>
+                
+                <div class="tab-content active" id="student-training">
+                    <h3>Student Training Programs (2025)</h3>
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>S.No</th>
+                                    <th>Student Name</th>
+                                    <th>Branch</th>
+                                    <th>Mentor</th>
+                                    <th>Duration</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Rahul Sharma</td>
+                                    <td>Computer Science</td>
+                                    <td>Dr. Amit Patel</td>
+                                    <td>6 months</td>
+                                    <td><span class="status-badge ongoing">Ongoing</span></td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>Priya Singh</td>
+                                    <td>Electronics</td>
+                                    <td>Dr. Neha Gupta</td>
+                                    <td>4 months</td>
+                                    <td><span class="status-badge completed">Completed</span></td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>Arjun Mehta</td>
+                                    <td>Mechanical</td>
+                                    <td>Dr. Sanjay Kumar</td>
+                                    <td>3 months</td>
+                                    <td><span class="status-badge upcoming">Upcoming</span></td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>Ananya Reddy</td>
+                                    <td>Aeronautics</td>
+                                    <td>Dr. Rajesh Iyer</td>
+                                    <td>5 months</td>
+                                    <td><span class="status-badge ongoing">Ongoing</span></td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>Vikram Joshi</td>
+                                    <td>Chemical</td>
+                                    <td>Dr. Priyanka Shah</td>
+                                    <td>6 months</td>
+                                    <td><span class="status-badge ongoing">Ongoing</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+                <div class="tab-content" id="employee-training">
+                    <h3>Employee Training Programs (2025)</h3>
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>S.No</th>
+                                    <th>Employee Name</th>
+                                    <th>Department</th>
+                                    <th>Role</th>
+                                    <th>Training Program</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Sanjay Verma</td>
+                                    <td>R&D</td>
+                                    <td>Scientist</td>
+                                    <td>Advanced Materials</td>
+                                    <td><span class="status-badge ongoing">Ongoing</span></td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>Meena Kapoor</td>
+                                    <td>HR</td>
+                                    <td>Manager</td>
+                                    <td>Leadership Skills</td>
+                                    <td><span class="status-badge completed">Completed</span></td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>Rajat Malhotra</td>
+                                    <td>Engineering</td>
+                                    <td>Technician</td>
+                                    <td>Safety Protocols</td>
+                                    <td><span class="status-badge upcoming">Upcoming</span></td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>Divya Nair</td>
+                                    <td>Administration</td>
+                                    <td>Executive</td>
+                                    <td>New Software</td>
+                                    <td><span class="status-badge ongoing">Ongoing</span></td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>Alok Mishra</td>
+                                    <td>Security</td>
+                                    <td>Officer</td>
+                                    <td>Cyber Security</td>
+                                    <td><span class="status-badge completed">Completed</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="dashboard-footer">
+            <p>© <span id="currentYear"></span> All Rights Reserved</p>
+            <p>HR Daily Operations Dashboard v2.3</p>
+        </footer>
+    </div>
+
+    <script src="authentication.js"></script>
+    <script src="script.js"></script>
+    <script>
+        // Tab functionality for training page
+        document.addEventListener('DOMContentLoaded', function() {
+            const tabBtns = document.querySelectorAll('.tab-btn');
+            const tabContents = document.querySelectorAll('.tab-content');
+            
+            tabBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    // Remove active class from all buttons and contents
+                    tabBtns.forEach(b => b.classList.remove('active'));
+                    tabContents.forEach(c => c.classList.remove('active'));
+                    
+                    // Add active class to clicked button and corresponding content
+                    this.classList.add('active');
+                    const tabId = this.getAttribute('data-tab') + '-training';
+                    document.getElementById(tabId).classList.add('active');
+                });
+            });
+            
+            // Initialize date and user info
+            initializeDateTime();
+            loadUserData();
+            setupLogout();
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HRIS - Events</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="dashboard">
+        <header class="dashboard-header">
+            <div class="header-center">
+                <h1>HUMAN RESOURCE INFORMATION SYSTEM</h1>
+                <p class="current-date" id="currentDate"></p>
+            </div>
+            <div class="user-actions">
+                <div class="user-greeting">
+                    <span id="timeGreeting">Good Morning</span>,
+                    <span id="userName">Admin</span>
+                </div>
+                <button class="logout-btn">Logout</button>
+            </div>
+        </header>
+
+        <nav class="main-nav">
+            <div class="nav-container">
+                <div class="nav-items">
+                    <a href="dashboard.html" class="nav-item" data-section="dashboard">Dashboard</a>
+                    <a href="training.html" class="nav-item" data-section="training">Training</a>
+                    <a href="hiring.html" class="nav-item" data-section="hiring">Hiring</a>
+                    <a href="assessment.html" class="nav-item" data-section="assessment">Assessment</a>
+                    <a href="correspondence.html" class="nav-item" data-section="correspondence">Correspondence</a>
+                    <a href="events.html" class="nav-item active" data-section="events">Events</a>
+                </div>
+                <div class="search-container">
+                    <input type="text" placeholder="Search..." class="search-input">
+                    <button class="search-btn">
+                        <span class="search-icon">🔍</span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+
+        <main class="dashboard-content">
+            <section class="content-section active">
+                <div class="section-header">
+                    <h2><span class="header-icon">📅</span> Events Calendar (2025)</h2>
+                </div>
+                
+                <div class="events-tabs">
+                    <button class="tab-btn active" data-tab="upcoming">Upcoming</button>
+                    <button class="tab-btn" data-tab="ongoing">Ongoing</button>
+                    <button class="tab-btn" data-tab="completed">Completed</button>
+                </div>
+                
+                <div class="tab-content active" id="upcoming-events">
+                    <h3>Upcoming Events</h3>
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>S.No</th>
+                                    <th>Event Name</th>
+                                    <th>Date</th>
+                                    <th>Venue</th>
+                                    <th>Organizer</th>
+                                    <th>Participants</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Annual Day Celebration</td>
+                                    <td>15-04-2025</td>
+                                    <td>Auditorium</td>
+                                    <td>HR Department</td>
+                                    <td>All Employees</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>Technical Symposium</td>
+                                    <td>20-05-2025</td>
+                                    <td>Conference Hall</td>
+                                    <td>R&D Department</td>
+                                    <td>Scientists</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>Health Checkup Camp</td>
+                                    <td>10-06-2025</td>
+                                    <td>Medical Center</td>
+                                    <td>Admin</td>
+                                    <td>All Employees</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+                <div class="tab-content" id="ongoing-events">
+                    <h3>Ongoing Events</h3>
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>S.No</th>
+                                    <th>Event Name</th>
+                                    <th>Start Date</th>
+                                    <th>End Date</th>
+                                    <th>Venue</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Leadership Workshop</td>
+                                    <td>01-03-2025</td>
+                                    <td>05-03-2025</td>
+                                    <td>Training Room</td>
+                                    <td><span class="status-badge ongoing">Day 3</span></td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>Recruitment Drive</td>
+                                    <td>10-03-2025</td>
+                                    <td>15-03-2025</td>
+                                    <td>HR Block</td>
+                                    <td><span class="status-badge ongoing">Day 2</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+                <div class="tab-content" id="completed-events">
+                    <h3>Completed Events</h3>
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>S.No</th>
+                                    <th>Event Name</th>
+                                    <th>Date</th>
+                                    <th>Venue</th>
+                                    <th>Participants</th>
+                                    <th>Feedback</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>New Year Celebration</td>
+                                    <td>01-01-2025</td>
+                                    <td>Auditorium</td>
+                                    <td>120</td>
+                                    <td><span class="status-badge completed">4.5/5</span></td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>Republic Day</td>
+                                    <td>26-01-2025</td>
+                                    <td>Ground</td>
+                                    <td>All Employees</td>
+                                    <td><span class="status-badge completed">4.8/5</span></td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>Safety Training</td>
+                                    <td>15-02-2025</td>
+                                    <td>Training Hall</td>
+                                    <td>45</td>
+                                    <td><span class="status-badge completed">4.2/5</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="dashboard-footer">
+            <p>© <span id="currentYear"></span> All Rights Reserved</p>
+            <p>HR Daily Operations Dashboard v2.3</p>
+        </footer>
+    </div>
+
+    <script src="authentication.js"></script>
+    <script src="script.js"></script>
+    <script>
+        // Tab functionality for events page
+        document.addEventListener('DOMContentLoaded', function() {
+            const tabBtns = document.querySelectorAll('.tab-btn');
+            const tabContents = document.querySelectorAll('.tab-content');
+            
+            tabBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    // Remove active class from all buttons and contents
+                    tabBtns.forEach(b => b.classList.remove('active'));
+                    tabContents.forEach(c => c.classList.remove('active'));
+                    
+                    // Add active class to clicked button and corresponding content
+                    this.classList.add('active');
+                    const tabId = this.getAttribute('data-tab') + '-events';
+                    document.getElementById(tabId).classList.add('active');
+                });
+            });
+            
+            // Initialize date and user info
+            initializeDateTime();
+            loadUserData();
+            setupLogout();
+        });
+    </script>
+</body>
+</html>
