@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HRIS - Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="dashboard">
+        <!-- Main Header -->
+        <header class="dashboard-header">
+            <div class="header-center">
+                <h1>HUMAN RESOURCE INFORMATION SYSTEM</h1>
+                <p class="current-date" id="currentDate"></p>
+            </div>
+            <div class="user-actions">
+                <div class="user-greeting">
+                    <span id="timeGreeting">Good Morning</span>,
+                    <span id="userName">Admin</span>
+                </div>
+                <button class="logout-btn">Logout</button>
+            </div>
+        </header>
+
+        <!-- Navigation Bar -->
+        <nav class="main-nav">
+            <div class="nav-container">
+                <div class="nav-items">
+                    <a href="#" class="nav-item active" data-section="dashboard">Dashboard</a>
+                    <a href="#" class="nav-item" data-section="training">Training</a>
+                    <a href="#" class="nav-item" data-section="hiring">Hiring</a>
+                    <a href="#" class="nav-item" data-section="assessment">Assessment</a>
+                    <a href="#" class="nav-item" data-section="correspondence">Correspondence</a>
+                    <a href="#" class="nav-item" data-section="events">Events</a>
+                </div>
+                <div class="search-container">
+                    <input type="text" placeholder="Search..." class="search-input">
+                    <button class="search-btn">
+                        <span class="search-icon">🔍</span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Quick Tools Section -->
+        <section class="quick-tools-section">
+            <div class="tools-container">
+                <button class="tool-btn">
+                    <span class="icon">📝</span>
+                    <span>Process Payroll</span>
+                </button>
+                <button class="tool-btn">
+                    <span class="icon">📧</span>
+                    <span>Bulk Email</span>
+                </button>
+                <button class="tool-btn">
+                    <span class="icon">📊</span>
+                    <span>Generate Report</span>
+                </button>
+                <button class="tool-btn">
+                    <span class="icon">👥</span>
+                    <span>Add Employee</span>
+                </button>
+                <button class="tool-btn">
+                    <span class="icon">📅</span>
+                    <span>Schedule Event</span>
+                </button>
+                <button class="tool-btn">
+                    <span class="icon">📋</span>
+                    <span>Create APAR</span>
+                </button>
+            </div>
+        </section>
+
+        <!-- Main Content -->
+        <main class="dashboard-content">
+            <section class="content-section active" id="dashboard">
+                <div class="dashboard-grid">
+                    <!-- Today's Priorities -->
+                    <div class="priority-section">
+                        <div class="section-header">
+                            <h2><span class="header-icon">📌</span> Today's Priorities</h2>
+                            <button class="view-all-btn">View All</button>
+                        </div>
+                        <div class="priority-grid">
+                            <div class="priority-card urgent">
+                                <div class="priority-content">
+                                    <h3>Appraisal Meetings</h3>
+                                    <p>10:30 AM - Conference Room 2</p>
+                                    <div class="priority-meta">
+                                        <span class="badge">High Priority</span>
+                                        <span class="time-remaining">Starts in 1h 15m</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="priority-card">
+                                <div class="priority-content">
+                                    <h3>New Joining Forms</h3>
+                                    <p>5 candidates to process</p>
+                                    <div class="priority-meta">
+                                        <span class="badge">Pending</span>
+                                        <span class="time-remaining">Due today</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="priority-card">
+                                <div class="priority-content">
+                                    <h3>Training Session</h3>
+                                    <p>SPARROW Portal - 2:00 PM</p>
+                                    <div class="priority-meta">
+                                        <span class="badge">Scheduled</span>
+                                        <span class="time-remaining">Starts in 4h</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Recent Activities -->
+                    <div class="activity-section">
+                        <div class="section-header">
+                            <h2><span class="header-icon">🔄</span> Recent Activities</h2>
+                            <div class="activity-filters">
+                                <select class="filter-select">
+                                    <option>All Activities</option>
+                                    <option>Recruitment</option>
+                                    <option>Training</option>
+                                    <option>Administration</option>
+                                </select>
+                                <button class="refresh-btn">⟳ Refresh</button>
+                            </div>
+                        </div>
+                        <div class="activity-feed">
+                            <div class="activity-item complete">
+                                <div class="activity-time">Today, 09:00 AM</div>
+                                <div class="activity-content">
+                                    <div class="activity-header">
+                                        <h3>Morning Briefing Completed</h3>
+                                        <span class="activity-status complete">✓ Completed</span>
+                                    </div>
+                                    <p>Discussed pending appraisals and new recruitment drive</p>
+                                    <div class="activity-tags">
+                                        <span class="tag recruitment">Recruitment</span>
+                                        <span class="tag meeting">Meeting</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="activity-item in-progress">
+                                <div class="activity-time">Today, 10:15 AM</div>
+                                <div class="activity-content">
+                                    <div class="activity-header">
+                                        <h3>Processing Applications</h3>
+                                        <span class="activity-status in-progress">↻ In Progress</span>
+                                    </div>
+                                    <p>Reviewing 12 new applications for technical positions</p>
+                                    <div class="activity-tags">
+                                        <span class="tag recruitment">Recruitment</span>
+                                        <span class="tag priority">Priority</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="activity-item upcoming">
+                                <div class="activity-time">Today, 02:00 PM</div>
+                                <div class="activity-content">
+                                    <div class="activity-header">
+                                        <h3>Technical Training</h3>
+                                        <span class="activity-status upcoming">⏰ Upcoming</span>
+                                    </div>
+                                    <p>SPARROW portal training for new hires</p>
+                                    <div class="activity-tags">
+                                        <span class="tag training">Training</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Other Module Sections -->
+            <section class="content-section" id="training">
+                <div class="module-container"></div>
+            </section>
+            <section class="content-section" id="hiring">
+                <div class="module-container"></div>
+            </section>
+            <section class="content-section" id="assessment">
+                <div class="module-container"></div>
+            </section>
+            <section class="content-section" id="correspondence">
+                <div class="module-container"></div>
+            </section>
+            <section class="content-section" id="events">
+                <div class="module-container"></div>
+            </section>
+        </main>
+
+        <footer class="dashboard-footer">
+            <p>© <span id="currentYear"></span> All Rights Reserved</p>
+            <p>HR Daily Operations Dashboard v2.3</p>
+        </footer>
+    </div>
+
+    <script src="authentication.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

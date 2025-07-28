@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HRIS Login</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-header">
+            <h1>Human Resource Information System Login</h1>
+        </div>
+        
+        <form id="loginForm" class="login-form">
+            <div class="form-group">
+                <label for="username">Employee ID</label>
+                <input type="text" id="username" placeholder="Enter your ID" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="password">Password</label>
+                <div class="password-wrapper">
+                    <input type="password" id="password" placeholder="Enter your password" required>
+                    <span class="password-toggle">👁️</span>
+                </div>
+            </div>
+            
+            <div class="form-options">
+                <label class="remember-me">
+                    <input type="checkbox"> Remember me
+                </label>
+                <a href="#" class="forgot-password">Forgot password?</a>
+            </div>
+            
+            <button type="submit" class="login-btn">Login to HRIS</button>
+            
+            <div class="security-note">
+                <span class="lock-icon">🔒</span>
+                Secure access for authorized personnel only. Unauthorized access prohibited.
+            </div>
+        </form>
+    </div>
+
+    <script src="authentication.js"></script>
+</body>
+</html>
