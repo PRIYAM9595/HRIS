@@ -44,16 +44,60 @@
         <main class="dashboard-content">
             <section class="content-section active">
                 <div class="section-header">
-                    <h2><span class="header-icon">👥</span> Hiring Process (2025)</h2>
+                    <h2><span class="header-icon">👥</span> Hiring Process</h2>
                 </div>
                 
                 <div class="hiring-tabs">
-                    <button class="tab-btn active" data-tab="consultant">Consultant Hiring</button>
+                    <button class="tab-btn active" data-tab="advertisement">Advertisements</button>
+                    <button class="tab-btn" data-tab="consultant">Consultant Hiring</button>
                     <button class="tab-btn" data-tab="apprentice">Apprentice Hiring</button>
-                    <button class="tab-btn" data-tab="advertisement">Advertisements</button>
                 </div>
                 
-                <div class="tab-content active" id="consultant-hiring">
+                <div class="tab-content active" id="advertisement-hiring">
+                    <h3>Advertisement Details</h3>
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>S.No</th>
+                                    <th>Advertisement No.</th>
+                                    <th>Position</th>
+                                    <th>Published Date</th>
+                                    <th>Closing Date</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>DRDO/HR/01/2025</td>
+                                    <td>Scientist 'B'</td>
+                                    <td>15-01-2025</td>
+                                    <td>15-02-2025</td>
+                                    <td><span class="status-badge completed">Closed</span></td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>DRDO/HR/02/2025</td>
+                                    <td>Technical Assistant</td>
+                                    <td>01-03-2025</td>
+                                    <td>31-03-2025</td>
+                                    <td><span class="status-badge ongoing">Open</span></td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>DRDO/HR/03/2025</td>
+                                    <td>Junior Research Fellow</td>
+                                    <td>15-04-2025</td>
+                                    <td>15-05-2025</td>
+                                    <td><span class="status-badge upcoming">Upcoming</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="tab-content" id="consultant-hiring">
                     <h3>Consultant Hiring Process</h3>
                     <div class="table-container">
                         <table>
@@ -97,7 +141,7 @@
                     </div>
                 </div>
                 
-                <div class="tab-content" id="apprentice-hiring">
+                <div class="tab-content"id="apprentice-hiring">
                     <h3>Apprentice Hiring</h3>
                     <div class="table-container">
                         <table>
@@ -141,54 +185,11 @@
                     </div>
                 </div>
                 
-                <div class="tab-content" id="advertisement-hiring">
-                    <h3>Advertisement Details</h3>
-                    <div class="table-container">
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>S.No</th>
-                                    <th>Advertisement No.</th>
-                                    <th>Position</th>
-                                    <th>Published Date</th>
-                                    <th>Closing Date</th>
-                                    <th>Status</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>1</td>
-                                    <td>DRDO/HR/01/2025</td>
-                                    <td>Scientist 'B'</td>
-                                    <td>15-01-2025</td>
-                                    <td>15-02-2025</td>
-                                    <td><span class="status-badge completed">Closed</span></td>
-                                </tr>
-                                <tr>
-                                    <td>2</td>
-                                    <td>DRDO/HR/02/2025</td>
-                                    <td>Technical Assistant</td>
-                                    <td>01-03-2025</td>
-                                    <td>31-03-2025</td>
-                                    <td><span class="status-badge ongoing">Open</span></td>
-                                </tr>
-                                <tr>
-                                    <td>3</td>
-                                    <td>DRDO/HR/03/2025</td>
-                                    <td>Junior Research Fellow</td>
-                                    <td>15-04-2025</td>
-                                    <td>15-05-2025</td>
-                                    <td><span class="status-badge upcoming">Upcoming</span></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
             </section>
         </main>
 
         <footer class="dashboard-footer">
-            <p>© <span id="currentYear"></span> All Rights Reserved</p>
+            <p>© All Rights Reserved</p>
             <p>HR Daily Operations Dashboard v2.3</p>
         </footer>
     </div>
